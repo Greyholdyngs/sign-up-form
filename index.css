@@ -1,0 +1,212 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(234, 29%, 20%);
+}
+.container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    padding-block: 20px;
+    padding-inline: 30px;
+    border-radius: 20px;
+    color: hsl(235, 18%, 26%);
+    background-color: hsl(0, 0%, 100%);
+    height: 75vh;
+}
+.container .form {
+    width: 350px;
+}
+.container .form h1 {
+    font-size: 50px;
+    margin-block-end: 10px;
+    font-weight: 700;
+}
+.container .form .p {
+    margin-block: 20px 10px;
+    font-size: 15px;
+}
+.container .fullimage .img {
+    width: 290px;
+}
+.container .fullimage .mobile {
+    display: none;
+    width: 290px;
+}
+.container .form ul {
+    margin-block: 15px;
+}
+.container .form ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    gap: 10px;
+    margin-block: 5px;
+}
+.container .form ul li::before {
+    content: url('./assets/images/icon-list.svg');
+    display: inline;
+}
+.container .form form .labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .form form .labels .error {
+    font-size: 13px;
+    color: hsl(4, 100%, 67%);
+    display: none;
+}
+.container .form form div {
+    display: flex;
+}
+.container .form form div input {
+    flex: 5;
+    padding-block: 7px;
+    padding-inline: 13px;
+    font-size: 15px;
+    border-radius: 7px;
+    border: 1px solid hsl(0, 0%,58%);
+    margin-block: 15px;
+    cursor: pointer;
+}
+.container .form form div input:active {
+    border: 1px solid hsl(4, 100%, 67%);
+    background-color: pink;
+}
+.container .form form div button {
+    flex: 5;
+    padding-block: 10px;
+    padding-inline: 13px;
+    border-radius: 7px;
+    border: none;
+    font-size: 17px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(235, 18%, 26%);
+    cursor: pointer;
+    transition: .5s;
+}
+.container .form form div button:hover {
+    background:  linear-gradient(to right, hsl(340, 94%, 56%),hsl(4, 100%, 67%))
+}
+.success {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding-block-start: 50px;
+    padding-inline: 40px;
+    border-radius: 20px;
+    color: hsl(235, 18%, 26%);
+    background-color: hsl(0, 0%, 100%);
+    height: 65vh;
+    width: 65vh;
+    text-align: left;
+}
+.success img {
+    width: 50px;
+}
+.success h1 {
+    margin-block: 20px;
+    line-height: 50px;
+    font-weight: 800;
+    font-size: 50px;
+}
+.success p {
+    font-size: 16px;
+    font-weight: 450;
+    box-shadow: 0px 0px 5px hsl(0, 0%, 100%);
+}
+.success p span {
+    font-weight: 700;
+}
+.success button {
+    width: 100%;
+    margin-block: 20px;
+    padding-block: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: hsl(235, 18%, 26%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: .5s;
+}
+.success button:hover {
+    background:  linear-gradient(to right, hsl(340, 94%, 56%),hsl(4, 100%, 67%))
+}
+section {
+    padding: 10px;
+}
+section .attribution {
+    background: linear-gradient(to left, hsl(0, 0%, 100%), hsl(0, 0%, 30%));
+    padding-block: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px;
+    width: 50%;
+    font-size: 10px;
+    margin: auto;
+}
+.attribution a {
+    text-decoration: none;
+    color: hsl(340, 94%, 46%);
+    font-size: 15px;
+    font-weight: 700;
+}
+@media screen and (min-width: 0px) and (max-width: 700px) {
+    body {
+        height: 100%;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .container {
+        flex-direction: column-reverse;
+        height: 100%;
+        border-radius: 0px;
+        padding: 0px;
+        gap: 0px;
+    }
+    .container .fullimage {
+        width: 100%;
+    }
+    .container .fullimage .img {
+        display: none;
+    }
+    .container .fullimage .mobile {
+        display: block;
+        width: 100%;
+    }
+    .container .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 500px;
+        width: 100%;
+        padding-inline: px;
+    }
+    .container .form form div input {
+        flex: 3;
+    }
+    .container .form h1 {
+        padding-inline-start: 20px;
+    }
+    .container .form p {
+        padding-inline: 20px;
+    }
+    .container .form ul {
+        padding-inline: 20px;
+    }
+    .container .form form {
+        padding-inline: 20px;
+    }
+    section .attribution {
+        width: 70%;
+        left: 0px;
+    }
+}
